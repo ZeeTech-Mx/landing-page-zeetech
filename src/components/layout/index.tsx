@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "../navbar";
 
-export function MainLayout({ children }: { children?: ReactNode }) {
+export default function MainLayout() {
   return (
     <>
       <Navbar/>
-      {children}
+      <Outlet />
     </>
   )
 }
