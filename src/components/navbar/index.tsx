@@ -23,7 +23,7 @@ export default function Example() {
             <span className="sr-only">ZeeTech</span>
             <img
               alt="Zeetech"
-              src="/logo.webp"
+              src="/logo-black.svg"
               className="h-20 w-auto"
             />
           </a>

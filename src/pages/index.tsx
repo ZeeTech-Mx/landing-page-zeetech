@@ -3,12 +3,12 @@ import { TypeAnimation } from "react-type-animation";
 import Globe, { GlobeMethods } from "react-globe.gl";
 import Container from "../components/container/container";
 import { SimpleCard } from "../components/cards/simple";
-import ModernInnerShadowCardVariant1 from "@/components/cards/inner-shador-card";
+import ModernInnerShadowCardVariant1 from "~/components/cards/inner-shador-card";
 import { motion } from "framer-motion";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import ProgressBar from "@/components/progress-bar/progress";
-import GridPattern from "@/components/animata/background/grid-pattern";
-import { cn } from "@/lib/utils";
+import { AuroraBackground } from "~/components/ui/aurora-background";
+import ProgressBar from "~/components/progress-bar/progress";
+import GridPattern from "~/components/animata/background/grid-pattern";
+import { cn } from "~/lib/utils";
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
