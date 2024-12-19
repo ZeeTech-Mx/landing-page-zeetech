@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Container from "../container/container";
+import {v4} from 'uuid'
+import { Progress } from "./progress.type";
 
-export default function ProgressBars({values}: {values: { title: string, value: number }[]}) {
+export default function ProgressBars({values}: {values: Progress[]}) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -11,7 +13,7 @@ export default function ProgressBars({values}: {values: { title: string, value: 
   });
   const [progress, setProgress] = useState(0);
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const timer = setTimeout(() => setProgress(latest), 500)
+    const timer = setTimeout(() => setProgress(latest > 0 && latest > progress ? latest: progress), 300)
     return () => clearTimeout(timer)
   })
 
@@ -19,7 +21,7 @@ export default function ProgressBars({values}: {values: { title: string, value: 
     <Container className="m-5">
       <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {values.map(({ title, value }, index) => (
-          <div className={`${values.length % 2 === 1 && index === 0 && 'col-span-1 md:col-span-2'} mx-10 my-2`}>
+          <div key={v4()} className={`${values.length % 2 === 1 && index === 0 && 'col-span-1 md:col-span-2'} mx-10 my-2`}>
             <h5 className="text-white text-center font-bold text-2xl">
               {title}
             </h5>

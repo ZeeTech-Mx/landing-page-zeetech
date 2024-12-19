@@ -17,7 +17,7 @@ export default function Example() {
 
   return (
     <header>
-      <nav aria-label="Global" className="backdrop-blur-sm bg-gray-50/[.3] dark:bg-gray-800/[.3] w-full mx-auto fixed z-20 top-0 start-0 flex items-center justify-between p-6 lg:px-8">
+      <nav aria-label="Global" className="backdrop-blur-sm bg-gray-50/[.3] dark:bg-gray-800/[.3] w-full mx-auto fixed z-50 top-0 start-0 flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1 flex-wrap">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">ZeeTech</span>

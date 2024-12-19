@@ -6,9 +6,10 @@ import { SimpleCard } from "../components/cards/simple";
 import ModernInnerShadowCardVariant1 from "~/components/cards/inner-shador-card";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "~/components/ui/aurora-background";
-import ProgressBar from "~/components/progress-bar/progress";
+import ProgressBar from "~/components/progress/bar";
 import GridPattern from "~/components/animata/background/grid-pattern";
 import { cn } from "~/lib/utils";
+import { ProgressCircular } from "~/components/progress/circular";
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
@@ -210,13 +211,26 @@ export default function MainPage() {
           </motion.div>
         </AuroraBackground>
       </Container>
-      <div className="bg-background relative flex size-full min-w-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+      <div className="bg-background relative flex min-h-screen min-w-screen items-start justify-center rounded-lg border py-40 md:shadow-xl overflow-hidden">
         <SimpleCard
-          className="max-w-full h-screen flex items-center justify-center"
+          className="flex items-center justify-center h-full my-auto"
           title="¿Por que implementar I.A. con nosotros?"
-          body="Zeetech utiliza tecnologia open-source, lo que nos permite salvaguardar los datos de nuestros clientes en nuestra propia infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y contamos con una amplia variedad de soluciones ya vendidas a gobierno en México"
+          body={
+            <>
+              <p className="m-4">
+                Zeetech utiliza tecnologia open-source, lo que nos permite salvaguardar los datos de nuestros clientes en nuestra propia infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y contamos con una amplia variedad de soluciones ya vendidas a gobierno en México
+              </p>
+              <ProgressCircular
+                values={[
+                  {title: "Privacidad de datos", value: 100},
+                  {title: "Uso de tecnología OpenSource", value: 90},
+                  {title: "Desarrollo a la medida", value: 100},
+                  {title: "De nuestros desarrollos se basan en I.A.", value: 80},
+                ]}
+              />
+            </>
+          }
         />
-
         <GridPattern
           numSquares={30}
           maxOpacity={0.2}
@@ -224,7 +238,7 @@ export default function MainPage() {
           repeatDelay={1}
           className={cn(
             '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
-            'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
+            'inset-x-0 inset-y-[-30%] h-[150%] skew-y-12',
           )}
         />
       </div>
