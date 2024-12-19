@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-export default function Container({className, children}: {className?: string, children?: ReactNode}) {
+export default function Container({className, children, ...props}: {className?: string, children?: ReactNode} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
   return (
-    <div className={`container ${className ? className : ''}`}>
+    <div {...props} className={`container ${className ? className : ''}`}>
       {children}
     </div>
   )

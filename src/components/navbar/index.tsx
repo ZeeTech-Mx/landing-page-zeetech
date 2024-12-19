@@ -16,9 +16,9 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
+    <header>
+      <nav aria-label="Global" className="backdrop-blur-sm bg-gray-50/[.3] dark:bg-gray-800/[.3] w-full mx-auto fixed z-20 top-0 start-0 flex items-center justify-between p-6 lg:px-8">
+        <div className="flex lg:flex-1 flex-wrap">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">ZeeTech</span>
             <img
@@ -39,19 +39,19 @@ export default function Example() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <NavLink to="/" end className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/" end className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Inicio
           </NavLink>
-          <NavLink to="/about-us" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/about-us" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Sobre nosotros
           </NavLink>
-          <NavLink to="/services" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/services" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Servicios
           </NavLink>
-          <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Blog
           </NavLink>
-          <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Contactanos
           </NavLink>
         </PopoverGroup>
@@ -80,7 +80,7 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <NavLink to="/" end className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                <NavLink to="/" end className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white">
                   Inicio
                 </NavLink>
                 <NavLink to="/about-us" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">

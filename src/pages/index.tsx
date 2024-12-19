@@ -4,8 +4,11 @@ import Globe, { GlobeMethods } from "react-globe.gl";
 import Container from "../components/container/container";
 import { SimpleCard } from "../components/cards/simple";
 import ModernInnerShadowCardVariant1 from "@/components/cards/inner-shador-card";
-import Row from "@/components/row";
-import Col from "@/components/col";
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import ProgressBar from "@/components/progress-bar/progress";
+import GridPattern from "@/components/animata/background/grid-pattern";
+import { cn } from "@/lib/utils";
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
@@ -52,7 +55,7 @@ export default function MainPage() {
 
   return (
     <>
-      <Container className="max-w-full w-screen h-screen relative">
+      <Container className="max-w-full w-screen h-screen relative dark:bg-black">
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <TypeAnimation
             className="text-xl md:text-4xl"
@@ -79,7 +82,7 @@ export default function MainPage() {
         <div ref={globeDivEl} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0">
           <Globe
             ref={globeEl}
-            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+            globeImageUrl="/earth-night.webp"
             arcsData={arcsData}
             arcColor={'color'}
             arcDashLength={() => Math.random()}
@@ -91,7 +94,7 @@ export default function MainPage() {
         </div>
       </Container>
       <SimpleCard
-        className="max-w-full my-40"
+        className="max-w-full h-screen flex items-center justify-center"
         body={
           <>
             En ZeeTech, somos una empresa mexicana comprometida con el desarrollo de soluciones tecnológicas innovadoras.
@@ -102,29 +105,129 @@ export default function MainPage() {
         title={"No solo desarrollamos tecnología, creamos experiencias"}
       />
       <SimpleCard
-        className="max-w-full my-40"
+        className="max-w-full h-screen flex items-center justify-center"
         title="¿Por qué elegirnos?"
         body="De la idea a la ejecución: un enfoque sólido y transparente para transformar tu visión en realidad"
       />
-      <Container className="max-w-full my-40">
-        <Row>
-          <Col className="w-full h-full">
-            <ModernInnerShadowCardVariant1
-              body={
-                <>
-                  <h1>Expertos en el desarrollo y aplicacion de:</h1>
-                  <li className="list-disc">
-                    <ul>Inteligencia Artificial generativa</ul>
-                    <ul>Automatización de procesos con I.A.</ul>
-                    <ul>Bussiness Intelligence & Big Data</ul>
-                  </li>
-                </>
-              }
-              title="Aplicaciones de I.A." />
-          </Col>
-        </Row>
+      <Container className="max-w-full min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <ModernInnerShadowCardVariant1
+            body={
+              <>
+                <h2 className="text-3xl font-extrabold dark:text-white">Expertos en el desarrollo y aplicacion de:</h2>
+                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li className="text-xl">Inteligencia Artificial generativa</li>
+                  <li className="text-xl">Automatización de procesos con I.A.</li>
+                  <li className="text-xl">Bussiness Intelligence & Big Data</li>
+                </ul>
+              </>
+            }
+            title="Aplicaciones de I.A."
+            className="mx-5 my-2"
+          />
+          <ModernInnerShadowCardVariant1
+            body={
+              <>
+                <h2 className="text-3xl font-extrabold dark:text-white">Sistemas transaccionales basados en:</h2>
+                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li className="text-xl">Metodologias agiles</li>
+                  <li className="text-xl">Politicas de seguridad y encriptación</li>
+                  <li className="text-xl">Optimización de procesos</li>
+                </ul>
+              </>
+            }
+            title="Desarrollo web"
+            className="mx-5 my-2"
+          />
+          <ModernInnerShadowCardVariant1
+            body={
+              <>
+                <h2 className="text-3xl font-extrabold dark:text-white">Creamos app para que sean:</h2>
+                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li className="text-xl">Multiplataforma</li>
+                  <li className="text-xl">Eficientes en UI/UX</li>
+                  <li className="text-xl">Escalables</li>
+                </ul>
+              </>
+            }
+            title="Desarrollo movil"
+            className="mx-5 my-2"
+          />
+          <ModernInnerShadowCardVariant1
+            body={
+              <>
+                <h2 className="text-3xl font-extrabold dark:text-white">Colaboramos con socios estrategicos para:</h2>
+                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li className="text-xl">Centros de datos</li>
+                  <li className="text-xl">Circuitos de seguridad con I.A.</li>
+                  <li className="text-xl">Cableado estructurado</li>
+                </ul>
+              </>
+            }
+            title="Telecomunicaciones y infraestructura"
+            className="mx-5 my-2"
+          />
+        </div>
       </Container>
+      <Container className="min-w-full static">
+        <AuroraBackground>
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-4 items-center justify-center px-4"
+          >
+            <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+              ¿Que opinan los CEOs sobre la Gen A.I.
+            </div>
+            <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
+              Según una encuesta de Gartner, las empresas esperan que la Gen Al (IA generativa) actuara en su productividad de la siguiente manera, durante los próximos 2 años.
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-4 items-center justify-center px-4 my-10"
+          >
+            <ProgressBar
+              values={[
+                { title: "Incrementará más del 15% de productividad", value: 36 },
+                { title: "Incrementará del 11-15% de productividad", value: 20 },
+                { title: "Incrementará del 6-10% de productividad", value: 26 },
+                { title: "Incrementará del 1-5% de productividad", value: 16 },
+                { title: "Se mantendra o disminuira", value: 2 },
+              ]}
+            />
+          </motion.div>
+        </AuroraBackground>
+      </Container>
+      <div className="bg-background relative flex size-full min-w-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+        <SimpleCard
+          className="max-w-full h-screen flex items-center justify-center"
+          title="¿Por que implementar I.A. con nosotros?"
+          body="Zeetech utiliza tecnologia open-source, lo que nos permite salvaguardar los datos de nuestros clientes en nuestra propia infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y contamos con una amplia variedad de soluciones ya vendidas a gobierno en México"
+        />
 
+        <GridPattern
+          numSquares={30}
+          maxOpacity={0.2}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
+            'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
+          )}
+        />
+      </div>
     </>
   )
 }
