@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import AnimatedCircularProgressBar from "../animated-circular-progress-bar";
+import AnimatedCircularProgressBar from "./animated-circular-progress-bar";
 import Container from "../container/container";
 import { Progress } from "./progress.type";
 import { useMotionValueEvent, useScroll } from "framer-motion";

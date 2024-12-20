@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import Globe, { GlobeMethods } from "react-globe.gl";
 import Container from "../components/container/container";
 import { SimpleCard } from "../components/cards/simple";
-import ModernInnerShadowCardVariant1 from "~/components/cards/inner-shador-card";
+import ModernInnerShadowCardVariant1 from "~/components/cards/inner-shadow-card";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "~/components/ui/aurora-background";
 import ProgressBar from "~/components/progress/bar";
@@ -232,9 +232,9 @@ export default function MainPage() {
           }
         />
         <GridPattern
-          numSquares={30}
+          numSquares={100}
           maxOpacity={0.2}
-          duration={3}
+          duration={2}
           repeatDelay={1}
           className={cn(
             '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
