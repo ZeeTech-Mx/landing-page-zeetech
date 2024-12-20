@@ -15,7 +15,7 @@ export function ProgressCircular({ values }: { values: Progress[] }) {
     layoutEffect: true
   });
   useMotionValueEvent(scrollYProgress, "change", (currentValue) => {
-    const timer = setTimeout(() => setCurrent(currentValue > 0 && currentValue > current ? currentValue: current), 300)
+    const timer = setTimeout(() => setCurrent(currentValue > 0 && currentValue > current ? currentValue: current), 600)
     return () => clearTimeout(timer)
   })
   return (

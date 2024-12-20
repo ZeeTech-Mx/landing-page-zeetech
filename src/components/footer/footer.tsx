@@ -40,13 +40,13 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className='h-1/2 flex col-span-2 gap-x-10'>
-            <div className='flex flex-col'>
+          <div className='h-1/2 flex col-span-2 gap-x-10 max-md:pt-10'>
+            <div className='flex flex-col mx-auto'>
               <h4 className='text-xl font-bold mb-5'>¿Nuevo en zeetech?</h4>
               <Link className='hover:text-red-800' to={"/about-us"}>Nosotros</Link>
               <Link className='hover:text-red-800' to={"/blog"}>Blog</Link>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mx-auto'>
               <h4 className='text-xl font-bold mb-5'>Quiero innovar</h4>
               <Link className='hover:text-red-800' to={"/services"}>Servicios</Link>
               <Link className='hover:text-red-800' to={"/faq"}>FAQ</Link>
