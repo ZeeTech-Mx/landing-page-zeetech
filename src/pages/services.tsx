@@ -6,6 +6,9 @@ import { Card } from "~/components/cards/stack";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import { v4 } from "uuid";
+import LogoCarousel from "~/components/carrousel/logo";
+import { VercelIcon, ClaudeAIIcon, NextjsIcon, TailwindCSSIcon, TypeScriptIcon, StripeIcon, OpenAIIconBlack, NestJs, ViteJS, PostgreSQL, MongoDB, Python, Redis, PHP, Docker, Linux } from "~/components/icons/brands";
+import { FocusCards } from "~/components/cards/image";
 
 const projects = [
   {
@@ -46,6 +49,17 @@ const projects = [
   },
 
 ];
+
+const Industries = [
+  { title: "Medicina", src: "/industry/medicina.webp" },
+  { title: "Servicios financieros", src: "/industry/finanzas.webp" },
+  { title: "Educación", src: "/industry/education.webp" },
+  { title: "eComerce", src: "/industry/ecommerce.webp" },
+  { title: "Ciencia", src: "/industry/ciencia.webp" },
+  { title: "Gobierno", src: "/industry/gobierno.webp" },
+  { title: "Industria 4.0", src: "/industry/industria.webp" },
+  { title: "Marketing", src: "/industry/marketing.webp" }
+]
 
 
 export default function Services() {
@@ -144,7 +158,7 @@ export default function Services() {
         <main className='bg-black' ref={container}>
           <section className='text-white h-[70vh] w-full bg-slate-950 grid place-content-center '>
             <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-            <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
+            <h1 className='text-3xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
               SERVICIOS
             </h1>
           </section>
@@ -168,6 +182,35 @@ export default function Services() {
           </section>
         </main>
       </ReactLenis>
+      <Container className="grid justify-items-center min-w-full">
+        <LogoCarousel
+          columnCount={4}
+          logos={
+            [
+              { name: "Vercel", id: 1, img: VercelIcon },
+              { name: "Claude", id: 2, img: ClaudeAIIcon },
+              { name: "Nextjs", id: 3, img: NextjsIcon },
+              { name: "Tailwind", id: 4, img: TailwindCSSIcon },
+              { name: "Typescript", id: 5, img: TypeScriptIcon },
+              { name: "Stripe", id: 6, img: StripeIcon },
+              { name: "OpenAI", id: 7, img: OpenAIIconBlack },
+              { name: "NestJS", id: 8, img: NestJs },
+              { name: "ViteJs", id: 9, img: ViteJS },
+              { name: "PostgreSQL", id: 10, img: PostgreSQL },
+              { name: "MongoDB", id: 11, img: MongoDB },
+              { name: "Python", id: 12, img: Python },
+              { name: "Redis", id: 13, img: Redis },
+              { name: "Php", id: 14, img: PHP },
+              { name: "Docker", id: 15, img: Docker },
+              { name: "Linux", id: 16, img: Linux },
+            ]
+          }
+        />
+      </Container>
+      <Container className="min-w-full p-20">
+        <h3 className="text-center text-3xl font-bold mb-10">Industrias y sectores</h3>
+        <FocusCards cards={Industries} />
+      </Container>
     </>
   )
 }
