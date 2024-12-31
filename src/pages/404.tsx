@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "~/components/container/container";
 
 export default function NotFound() {
@@ -8,15 +9,9 @@ export default function NotFound() {
         <span className="text-red-800">Opps!</span> Pagina no encontrada
       </div>
       <div className="leading-3 mt-5">
-          Esta pagina no existe o dejo de existir
-        </div>
-    </Container>
-   /*  <div className="flex align-items-center justify-content-center vh-100">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold">404</h1>
-        
-        
+        Esta pagina no existe o dejo de existir
       </div>
-    </div> */
+      <Link className="rounded-full bg-red-800 p-4 m-4 mt-20 hover:bg-red-700" to={"/"}>Regresar</Link>
+    </Container>
   )
 }
