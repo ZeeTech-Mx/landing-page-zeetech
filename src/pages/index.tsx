@@ -116,7 +116,7 @@ export default function MainPage() {
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Expertos en el desarrollo y aplicacion de:</h2>
-                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Inteligencia Artificial generativa</li>
                   <li className="text-xl">Automatización de procesos con I.A.</li>
                   <li className="text-xl">Bussiness Intelligence & Big Data</li>
@@ -124,13 +124,13 @@ export default function MainPage() {
               </>
             }
             title="Aplicaciones de I.A."
-            className="mx-5 my-2"
+            className="mx-5 px-10 my-2"
           />
           <ModernInnerShadowCardVariant1
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Sistemas transaccionales basados en:</h2>
-                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Metodologias agiles</li>
                   <li className="text-xl">Politicas de seguridad y encriptación</li>
                   <li className="text-xl">Optimización de procesos</li>
@@ -138,13 +138,13 @@ export default function MainPage() {
               </>
             }
             title="Desarrollo web"
-            className="mx-5 my-2"
+            className="mx-5 px-10 my-2"
           />
           <ModernInnerShadowCardVariant1
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Creamos app para que sean:</h2>
-                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Multiplataforma</li>
                   <li className="text-xl">Eficientes en UI/UX</li>
                   <li className="text-xl">Escalables</li>
@@ -152,13 +152,13 @@ export default function MainPage() {
               </>
             }
             title="Desarrollo movil"
-            className="mx-5 my-2"
+            className="mx-5 px-10 my-2"
           />
           <ModernInnerShadowCardVariant1
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Colaboramos con socios estrategicos para:</h2>
-                <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Centros de datos</li>
                   <li className="text-xl">Circuitos de seguridad con I.A.</li>
                   <li className="text-xl">Cableado estructurado</li>
@@ -166,7 +166,7 @@ export default function MainPage() {
               </>
             }
             title="Telecomunicaciones y infraestructura"
-            className="mx-5 my-2"
+            className="mx-5 px-10 my-2"
           />
         </div>
       </Container>

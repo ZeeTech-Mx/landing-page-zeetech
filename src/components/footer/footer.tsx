@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter, faLinkedin, faFacebookF, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom';
+import { SocialNetworks } from '~/core/social_networks';
 
 
 export default function Footer() {
@@ -23,21 +24,21 @@ export default function Footer() {
           <div className="flex col-span-2">
             <img className="w-1/3 mx-auto my-auto" src="/logo-black.svg" alt="Zeetech" />
             <div className='w-1/3 mx-auto flex col-span-5 my-auto'>
-              <Link className='mx-auto' to={""}>
+              {/* <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faLinkedin} />
               </Link>
               <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faXTwitter} />
-              </Link>
-              <Link className='mx-auto' to={""}>
+              </Link> */}
+              <Link className='mx-auto' to={SocialNetworks.facebook}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
               </Link>
-              <Link className='mx-auto' to={""}>
+              <Link className='mx-auto' to={SocialNetworks.instagram}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
               </Link>
-              <Link className='mx-auto' to={""}>
+              {/* <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faYoutube} />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className='h-1/2 flex col-span-2 gap-x-10 max-md:pt-10'>
@@ -49,7 +50,7 @@ export default function Footer() {
             <div className='flex flex-col mx-auto'>
               <h4 className='text-xl font-bold mb-5'>Quiero innovar</h4>
               <Link className='hover:text-red-800' to={"/services"}>Servicios</Link>
-              <Link className='hover:text-red-800' to={"/faq"}>FAQ</Link>
+              {/* <Link className='hover:text-red-800' to={"/faq"}>FAQ</Link> */}
             </div>
           </div>
         </div>

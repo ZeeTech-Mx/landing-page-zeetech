@@ -48,9 +48,9 @@ export default function Example() {
           <NavLink to="/services" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Servicios
           </NavLink>
-          <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          {/* <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Contactanos
           </NavLink>
