@@ -49,6 +49,7 @@ export default function MainPage() {
       globeEl.current.controls().enableZoom = false;
       globeEl.current.controls().autoRotate = true;
       globeEl.current.controls().autoRotateSpeed = 0.7;
+      globeEl.current.controls().enableRotate = false;
     }
 
   }, [globeEl]);
