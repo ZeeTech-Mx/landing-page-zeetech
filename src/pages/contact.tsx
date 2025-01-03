@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import TextInput from '~/components/input/text_input';
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, useRef, useState } from 'react';
 import { faker } from '@faker-js/faker';
 import TextArea from '~/components/input/text_area';
 import PhoneInput from "~/components/input/phone_input";
