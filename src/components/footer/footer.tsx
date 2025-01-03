@@ -30,10 +30,10 @@ export default function Footer() {
               <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faXTwitter} />
               </Link> */}
-              <Link className='mx-auto' to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer">
+              <Link className='mx-auto' to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Facebook'>
                 <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
               </Link>
-              <Link className='mx-auto' to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer">
+              <Link className='mx-auto' to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Instagram'>
                 <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
               </Link>
               {/* <Link className='mx-auto' to={""}>
@@ -43,12 +43,12 @@ export default function Footer() {
           </div>
           <div className='h-1/2 flex col-span-2 gap-x-10 max-md:pt-10'>
             <div className='flex flex-col mx-auto'>
-              <h4 className='text-xl font-bold mb-5'>¿Nuevo en zeetech?</h4>
+              <p className='text-xl font-bold mb-5'>¿Nuevo en zeetech?</p>
               <Link className='hover:text-red-800' to={"/nosotros"}>Nosotros</Link>
               {/* <Link className='hover:text-red-800' to={"/blog"}>Blog</Link> */}
             </div>
             <div className='flex flex-col mx-auto'>
-              <h4 className='text-xl font-bold mb-5'>Quiero innovar</h4>
+              <p className='text-xl font-bold mb-5'>Quiero innovar</p>
               <Link className='hover:text-red-800' to={"/services"}>Servicios</Link>
               {/* <Link className='hover:text-red-800' to={"/faq"}>FAQ</Link> */}
             </div>

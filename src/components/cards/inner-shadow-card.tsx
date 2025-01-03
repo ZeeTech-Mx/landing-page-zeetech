@@ -17,9 +17,9 @@ export default function InnerShadowCard({ title, body, className }: { title: str
       {/* <div className="-rotate-6 h-40 translate-y-12 text-center font-bold text-neutral-500 text-neutral-500/20 text-xl tracking-tighter ">
         To replace with some content
       </div> */}
-      <h6 className="my-6 origin-left transform-gpu font-semibold text-red-800 text-xl tracking-tighter transition-all group-hover:scale-90 dark:text-orange-600">
+      <h1 className="my-6 origin-left transform-gpu font-semibold text-red-800 text-xl tracking-tighter transition-all group-hover:scale-90 dark:text-orange-600">
         {title}
-      </h6>
+      </h1>
       <div className="text-sm tracking-tight dark:text-gray-400">
         {body}
       </div>

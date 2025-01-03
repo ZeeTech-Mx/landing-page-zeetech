@@ -22,7 +22,7 @@ export default function Example() {
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">ZeeTech</span>
             <img
-              alt="Zeetech"
+              alt="ZeeTech Mex S.A. de C.V."
               src="/logo-black.svg"
               className="h-20 w-auto"
             />
@@ -42,16 +42,16 @@ export default function Example() {
           <NavLink to="/" end className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Inicio
           </NavLink>
-          <NavLink to="/nosotros" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/nosotros" aria-label="Sección sobre nosotros de Zeetech" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Sobre nosotros
           </NavLink>
-          <NavLink to="/servicios" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/servicios" aria-label="Servicios de desarrollo de software de Zeetech" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Servicios
           </NavLink>
           {/* <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Blog
           </NavLink> */}
-          <NavLink to="/contactanos" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/contactanos" aria-label="Sección de contacto de Zeetech" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Contactanos
           </NavLink>
         </PopoverGroup>

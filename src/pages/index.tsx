@@ -92,7 +92,6 @@ export default function MainPage() {
           }>
             <Globe
               ref={globeEl}
-              backgroundColor="#000011"
               globeImageUrl="/earth-night.webp"
               arcsData={arcsData}
               arcColor={'color'}

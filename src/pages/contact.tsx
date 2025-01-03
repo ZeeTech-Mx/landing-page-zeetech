@@ -119,11 +119,11 @@ export default function Contact() {
 
                 <div className="flex mt-4 -mx-1.5 ">
 
-                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer">
+                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Facebook'>
                     <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
                   </Link>
 
-                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer">
+                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Instagram'>
                     <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
                   </Link>
                 </div>
