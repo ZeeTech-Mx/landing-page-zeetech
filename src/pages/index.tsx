@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, lazy, Suspense } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { GlobeMethods } from "react-globe.gl";
+import Globe, { GlobeMethods } from "react-globe.gl";
 import Container from "../components/container/container";
 import { SimpleCard } from "../components/cards/simple";
 import InnerShadowCard from "~/components/cards/inner-shadow-card";
@@ -11,9 +11,7 @@ import { cn } from "~/lib/utils";
 import { ProgressCircular } from "~/components/progress/circular";
 import Spinner from "~/components/spinner/loading";
 
-
 const GridPattern = lazy(() => import("~/components/animata/background/grid-pattern"));
-const Globe = lazy(() => import("react-globe.gl"));
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
@@ -86,23 +84,17 @@ export default function MainPage() {
           />
         </div>
         <div ref={globeDivEl} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0">
-          <Suspense fallback={
-            <div className="min-w-sceen min-h-screen bg-[#000011]">
-            </div>
-          }>
-            <Globe
-              ref={globeEl}
-              globeImageUrl="/earth-night.webp"
-              arcsData={arcsData}
-              arcColor={'color'}
-              arcDashLength={() => Math.random()}
-              arcDashGap={() => Math.random()}
-              arcDashAnimateTime={() => Math.random() * 40000 + 500}
-              width={width}
-              height={height}
-            />
-          </Suspense>
-
+          <Globe
+            ref={globeEl}
+            globeImageUrl="/earth-night.webp"
+            arcsData={arcsData}
+            arcColor={'color'}
+            arcDashLength={() => Math.random()}
+            arcDashGap={() => Math.random()}
+            arcDashAnimateTime={() => Math.random() * 40000 + 500}
+            width={width}
+            height={height}
+          />
         </div>
       </Container>
       <SimpleCard
