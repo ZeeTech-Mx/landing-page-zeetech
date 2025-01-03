@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXTwitter, faLinkedin, faFacebookF, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom';
 import { SocialNetworks } from '~/core/social_networks';
 
