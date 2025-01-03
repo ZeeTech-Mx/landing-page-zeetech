@@ -73,7 +73,7 @@ export default function Services() {
   return (
     <>
       <Container className="min-w-full min-h-screen content-center px-4 md:px-16 lg:px-32 grid grid-cols-1 md:grid-cols-3 md:gap-9 lg:grid-cols-2">
-        <div className="items-center justify-center overflow-hidden pt-30 md:col-span-2 lg:col-span-1">
+        <div className="items-center justify-center overflow-hidden pt-40 md:pt-30 md:col-span-2 lg:col-span-1">
           <BoxReveal boxColor="#991b1b" duration={0.5}>
             <p className="mt-[.5rem] text-[1rem]">
               <span className="text-red-800">SOLUCIONES A LA MEDIDA</span>

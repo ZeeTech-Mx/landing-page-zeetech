@@ -40,12 +40,12 @@ export const Card: React.FC<CardProps> = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-[450px] w-[70%] rounded-md p-10 origin-top`}
+        className={`flex flex-col relative -top-[25%] h-[450px] w-[80%] rounded-md p-5 md:p-10 origin-top`}
       >
         <h2 className='text-4xl text-center font-semibold'>{title}</h2>
         <div className={`grid grid-cols-2 h-full pt-5 gap-10 py-5`}>
           <div>
-            <p className='text-2xl my-5'>{description}</p>
+            <p className='text-md md:text-2xl my-5'>{description}</p>
           </div>
           <div className={`rounded-lg overflow-hidden content-center`}>
             <motion.div style={{ scale: imageScale }}>

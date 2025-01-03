@@ -5,6 +5,7 @@ import AboutUs from "./pages/about_us";
 import ScrollToTop from "./components/scroll/scrollToTop";
 import Services from "./pages/services";
 import NotFound from "./pages/404";
+import Contact from "./pages/contact";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
           <Route index element={<MainPage />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="services" element={<Services />} />
-          {/* <Route path="*" element={<NoMatch />} /> */}
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </ScrollToTop>

@@ -1,0 +1,41 @@
+.react-tel-input .country-list .country:hover {
+  background-color: #536175;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: #4b5563;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: #536175;
+  border-radius: 3px 0 0 0;
+}
+
+.react-tel-input .selected-flag:focus {
+  background-color: #536175;
+}
+
+.react-tel-input .flag-dropdown{
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.react-tel-input .flag-dropdown:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
+}
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background-color: #536175;
+}
+
+.react-tel-input .form-control {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.react-tel-input .form-control:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
+}
+
