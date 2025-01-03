@@ -2,7 +2,7 @@ import { cn } from "~/lib/utils";
 import { ReactNode } from "react";
 
 
-export default function ModernInnerShadowCardVariant1({ title, body, className }: { title: string, body: string | ReactNode, className?: string }) {
+export default function InnerShadowCard({ title, body, className }: { title: string, body: string | ReactNode, className?: string }) {
   
   return (
     <div

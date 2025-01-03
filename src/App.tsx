@@ -12,9 +12,9 @@ export default function App() {
         <Route path='*' element={<NotFound />} />
         <Route path="/" element={<MainLayout />}>
           <Route index element={<MainPage />} />
-          <Route path="about-us" element={<AboutUsPage />} />
-          <Route path="services" element={<ServicesPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="nosotros" element={<AboutUsPage />} />
+          <Route path="servicios" element={<ServicesPage />} />
+          <Route path="contactanos" element={<ContactPage />} />
         </Route>
       </Routes>
     </ScrollToTop>

@@ -42,16 +42,16 @@ export default function Example() {
           <NavLink to="/" end className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Inicio
           </NavLink>
-          <NavLink to="/about-us#" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/nosotros" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Sobre nosotros
           </NavLink>
-          <NavLink to="/services" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/servicios" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Servicios
           </NavLink>
           {/* <NavLink to="/blog" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Blog
           </NavLink> */}
-          <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
+          <NavLink to="/contactanos" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
             Contactanos
           </NavLink>
         </PopoverGroup>
@@ -83,16 +83,16 @@ export default function Example() {
                 <NavLink to="/" end className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
                   Inicio
                 </NavLink>
-                <NavLink to="/about-us" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
+                <NavLink to="/nosotros" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
                   Sobre nosotros
                 </NavLink>
-                <NavLink to="/services" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
+                <NavLink to="/servicios" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
                   Servicios
                 </NavLink>
                 {/* <NavLink to="/blog" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
                   Blog
                 </NavLink> */}
-                <NavLink to="/contact" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
+                <NavLink to="/contactanos" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900">
                   Contactanos
                 </NavLink>
               </div>

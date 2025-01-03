@@ -1,15 +1,19 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, lazy, Suspense } from "react";
 import { TypeAnimation } from "react-type-animation";
-import Globe, { GlobeMethods } from "react-globe.gl";
+import { GlobeMethods } from "react-globe.gl";
 import Container from "../components/container/container";
 import { SimpleCard } from "../components/cards/simple";
-import ModernInnerShadowCardVariant1 from "~/components/cards/inner-shadow-card";
+import InnerShadowCard from "~/components/cards/inner-shadow-card";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "~/components/ui/aurora-background";
 import ProgressBar from "~/components/progress/bar";
-import GridPattern from "~/components/animata/background/grid-pattern";
 import { cn } from "~/lib/utils";
 import { ProgressCircular } from "~/components/progress/circular";
+import Spinner from "~/components/spinner/loading";
+
+
+const GridPattern = lazy(() => import("~/components/animata/background/grid-pattern"));
+const Globe = lazy(() => import("react-globe.gl"));
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
@@ -82,17 +86,24 @@ export default function MainPage() {
           />
         </div>
         <div ref={globeDivEl} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0">
-          <Globe
-            ref={globeEl}
-            globeImageUrl="/earth-night.webp"
-            arcsData={arcsData}
-            arcColor={'color'}
-            arcDashLength={() => Math.random()}
-            arcDashGap={() => Math.random()}
-            arcDashAnimateTime={() => Math.random() * 40000 + 500}
-            width={width}
-            height={height}
-          />
+          <Suspense fallback={
+            <div className="min-w-sceen min-h-screen bg-[#000011]">
+            </div>
+          }>
+            <Globe
+              ref={globeEl}
+              backgroundColor="#000011"
+              globeImageUrl="/earth-night.webp"
+              arcsData={arcsData}
+              arcColor={'color'}
+              arcDashLength={() => Math.random()}
+              arcDashGap={() => Math.random()}
+              arcDashAnimateTime={() => Math.random() * 40000 + 500}
+              width={width}
+              height={height}
+            />
+          </Suspense>
+
         </div>
       </Container>
       <SimpleCard
@@ -113,7 +124,7 @@ export default function MainPage() {
       />
       <Container className="max-w-full min-h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <ModernInnerShadowCardVariant1
+          <InnerShadowCard
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Expertos en el desarrollo y aplicacion de:</h2>
@@ -127,7 +138,7 @@ export default function MainPage() {
             title="Aplicaciones de I.A."
             className="mx-5 px-10 my-2"
           />
-          <ModernInnerShadowCardVariant1
+          <InnerShadowCard
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Sistemas transaccionales basados en:</h2>
@@ -141,7 +152,7 @@ export default function MainPage() {
             title="Desarrollo web"
             className="mx-5 px-10 my-2"
           />
-          <ModernInnerShadowCardVariant1
+          <InnerShadowCard
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Creamos app para que sean:</h2>
@@ -155,7 +166,7 @@ export default function MainPage() {
             title="Desarrollo movil"
             className="mx-5 px-10 my-2"
           />
-          <ModernInnerShadowCardVariant1
+          <InnerShadowCard
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">Colaboramos con socios estrategicos para:</h2>
@@ -223,25 +234,31 @@ export default function MainPage() {
               </p>
               <ProgressCircular
                 values={[
-                  {title: "Privacidad de datos", value: 100},
-                  {title: "Uso de tecnología OpenSource", value: 90},
-                  {title: "Desarrollo a la medida", value: 100},
-                  {title: "De nuestros desarrollos se basan en I.A.", value: 80},
+                  { title: "Privacidad de datos", value: 100 },
+                  { title: "Uso de tecnología OpenSource", value: 90 },
+                  { title: "Desarrollo a la medida", value: 100 },
+                  { title: "De nuestros desarrollos se basan en I.A.", value: 80 },
                 ]}
               />
             </>
           }
         />
-        <GridPattern
-          numSquares={100}
-          maxOpacity={0.2}
-          duration={2}
-          repeatDelay={1}
-          className={cn(
-            '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
-            'inset-x-0 inset-y-[-30%] h-[150%] skew-y-12',
-          )}
-        />
+        <Suspense fallback={
+          <div className="min-w-sceen min-h-screen grid justify-items-center content-center">
+            <Spinner />
+          </div>
+        }>
+          <GridPattern
+            numSquares={100}
+            maxOpacity={0.2}
+            duration={2}
+            repeatDelay={1}
+            className={cn(
+              '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
+              'inset-x-0 inset-y-[-30%] h-[150%] skew-y-12',
+            )}
+          />
+        </Suspense>
       </div>
     </>
   )

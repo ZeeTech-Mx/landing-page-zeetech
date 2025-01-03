@@ -18,7 +18,7 @@ export default function Footer() {
               <li className="my-5 text-md">Arquitecturas on promises & cloud</li>
             </ul>
           </div>
-          <Link to={"/contact"} className="rounded-lg bg-red-800 px-10 py-4 hover:rounded-2xl font-bold">Contactanos &rarr;</Link>
+          <Link to={"/contactanos"} className="rounded-lg bg-red-800 px-10 py-4 hover:rounded-2xl font-bold">Contactanos &rarr;</Link>
         </div>
         <div className='pt-20 md:pt-10 h-1/2'>
           <div className="flex col-span-2">
@@ -44,8 +44,8 @@ export default function Footer() {
           <div className='h-1/2 flex col-span-2 gap-x-10 max-md:pt-10'>
             <div className='flex flex-col mx-auto'>
               <h4 className='text-xl font-bold mb-5'>¿Nuevo en zeetech?</h4>
-              <Link className='hover:text-red-800' to={"/about-us"}>Nosotros</Link>
-              <Link className='hover:text-red-800' to={"/blog"}>Blog</Link>
+              <Link className='hover:text-red-800' to={"/nosotros"}>Nosotros</Link>
+              {/* <Link className='hover:text-red-800' to={"/blog"}>Blog</Link> */}
             </div>
             <div className='flex flex-col mx-auto'>
               <h4 className='text-xl font-bold mb-5'>Quiero innovar</h4>
