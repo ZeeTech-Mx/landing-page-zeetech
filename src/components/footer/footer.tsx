@@ -30,10 +30,10 @@ export default function Footer() {
               <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faXTwitter} />
               </Link> */}
-              <Link className='mx-auto' to={SocialNetworks.facebook}>
+              <Link className='mx-auto' to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
               </Link>
-              <Link className='mx-auto' to={SocialNetworks.instagram}>
+              <Link className='mx-auto' to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
               </Link>
               {/* <Link className='mx-auto' to={""}>
