@@ -11,7 +11,9 @@ import { cn } from "~/lib/utils";
 import { ProgressCircular } from "~/components/progress/circular";
 import Spinner from "~/components/spinner/loading";
 
-const GridPattern = lazy(() => import("~/components/animata/background/grid-pattern"));
+const GridPattern = lazy(
+  () => import("~/components/animata/background/grid-pattern")
+);
 
 export default function MainPage() {
   const globeEl = useRef<GlobeMethods>();
@@ -24,7 +26,7 @@ export default function MainPage() {
     startLng: (Math.random() - 0.5) * 360,
     endLat: (Math.random() - 0.5) * 180,
     endLng: (Math.random() - 0.5) * 360,
-    color: ['green', 'green']
+    color: ["green", "green"],
   }));
 
   useEffect(() => {
@@ -42,9 +44,8 @@ export default function MainPage() {
     resizeObserver.observe(globeDivEl.current);
     return () => {
       resizeObserver.disconnect();
-    }
-  },
-    [globeDivEl.current])
+    };
+  }, [globeDivEl.current]);
 
   useEffect(() => {
     if (globeEl?.current) {
@@ -53,42 +54,43 @@ export default function MainPage() {
       globeEl.current.controls().autoRotateSpeed = 0.7;
       globeEl.current.controls().enableRotate = false;
     }
-
   }, [globeEl]);
-
 
   return (
     <>
       <Container className="max-w-full w-screen h-screen relative dark:bg-black">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <TypeAnimation
-            className="text-xl md:text-4xl"
-            style={
-              {
-                fontWeight: 'bold',
-                color: 'white',
-                whiteSpace: 'pre-line',
-                height: '195px',
-                display: 'block',
-                textAlign: 'center'
-              }
-            }
-            sequence={[
-              'Bienvenidos a Zeetech',
-              300,
-              'Bienvenidos a Zeetech\nInnovando con inteligencia'
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={0}
-          />
+        <div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <TypeAnimation
+              className="text-xl md:text-4xl"
+              style={{
+                fontWeight: "bold",
+                color: "white",
+                whiteSpace: "pre-line",
+                height: "195px",
+                display: "block",
+                textAlign: "center",
+              }}
+              sequence={[
+                "Bienvenidos a Zeetech",
+                300,
+                "Bienvenidos a Zeetech\nInnovando con inteligencia",
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={0}
+            />
+          </div>
         </div>
-        <div ref={globeDivEl} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0">
+        <div
+          ref={globeDivEl}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0"
+        >
           <Globe
             ref={globeEl}
             globeImageUrl="/earth-night.webp"
             arcsData={arcsData}
-            arcColor={'color'}
+            arcColor={"color"}
             arcDashLength={() => Math.random()}
             arcDashGap={() => Math.random()}
             arcDashAnimateTime={() => Math.random() * 40000 + 500}
@@ -101,9 +103,11 @@ export default function MainPage() {
         className="max-w-full h-screen flex items-center justify-center"
         body={
           <>
-            En ZeeTech, somos una empresa mexicana comprometida con el desarrollo de soluciones tecnológicas innovadoras.
+            En ZeeTech, somos una empresa mexicana comprometida con el
+            desarrollo de soluciones tecnológicas innovadoras.
             <br />
-            Nos especializamos en tecnologías emergentes para ayudarte a superar los retos del mercado actual.
+            Nos especializamos en tecnologías emergentes para ayudarte a superar
+            los retos del mercado actual.
           </>
         }
         title={"No solo desarrollamos tecnología, creamos experiencias"}
@@ -118,10 +122,16 @@ export default function MainPage() {
           <InnerShadowCard
             body={
               <>
-                <h2 className="text-3xl font-extrabold dark:text-white">Expertos en el desarrollo y aplicacion de:</h2>
+                <h2 className="text-3xl font-extrabold dark:text-white">
+                  Expertos en el desarrollo y aplicacion de:
+                </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
-                  <li className="text-xl">Inteligencia Artificial generativa</li>
-                  <li className="text-xl">Automatización de procesos con I.A.</li>
+                  <li className="text-xl">
+                    Inteligencia Artificial generativa
+                  </li>
+                  <li className="text-xl">
+                    Automatización de procesos con I.A.
+                  </li>
                   <li className="text-xl">Bussiness Intelligence & Big Data</li>
                 </ul>
               </>
@@ -132,10 +142,14 @@ export default function MainPage() {
           <InnerShadowCard
             body={
               <>
-                <h2 className="text-3xl font-extrabold dark:text-white">Sistemas transaccionales basados en:</h2>
+                <h2 className="text-3xl font-extrabold dark:text-white">
+                  Sistemas transaccionales basados en:
+                </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Metodologias agiles</li>
-                  <li className="text-xl">Politicas de seguridad y encriptación</li>
+                  <li className="text-xl">
+                    Politicas de seguridad y encriptación
+                  </li>
                   <li className="text-xl">Optimización de procesos</li>
                 </ul>
               </>
@@ -146,7 +160,9 @@ export default function MainPage() {
           <InnerShadowCard
             body={
               <>
-                <h2 className="text-3xl font-extrabold dark:text-white">Creamos app para que sean:</h2>
+                <h2 className="text-3xl font-extrabold dark:text-white">
+                  Creamos app para que sean:
+                </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Multiplataforma</li>
                   <li className="text-xl">Eficientes en UI/UX</li>
@@ -160,7 +176,9 @@ export default function MainPage() {
           <InnerShadowCard
             body={
               <>
-                <h2 className="text-3xl font-extrabold dark:text-white">Colaboramos con socios estrategicos para:</h2>
+                <h2 className="text-3xl font-extrabold dark:text-white">
+                  Colaboramos con socios estrategicos para:
+                </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Centros de datos</li>
                   <li className="text-xl">Circuitos de seguridad con I.A.</li>
@@ -168,7 +186,7 @@ export default function MainPage() {
                 </ul>
               </>
             }
-            title="Telecomunicaciones y infraestructura"
+            title="Telecomunicaciones e infraestructura"
             className="mx-5 px-10 my-2"
           />
         </div>
@@ -189,7 +207,9 @@ export default function MainPage() {
               ¿Que opinan los CEOs sobre la Gen A.I.
             </div>
             <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
-              Según una encuesta de Gartner, las empresas esperan que la Gen Al (IA generativa) actuara en su productividad de la siguiente manera, durante los próximos 2 años.
+              Según una encuesta de Gartner, las empresas esperan que la Gen Al
+              (IA generativa) actuara en su productividad de la siguiente
+              manera, durante los próximos 2 años.
             </div>
           </motion.div>
           <motion.div
@@ -204,8 +224,14 @@ export default function MainPage() {
           >
             <ProgressBar
               values={[
-                { title: "Incrementará más del 15% de productividad", value: 36 },
-                { title: "Incrementará del 11-15% de productividad", value: 20 },
+                {
+                  title: "Incrementará más del 15% de productividad",
+                  value: 36,
+                },
+                {
+                  title: "Incrementará del 11-15% de productividad",
+                  value: 20,
+                },
                 { title: "Incrementará del 6-10% de productividad", value: 26 },
                 { title: "Incrementará del 1-5% de productividad", value: 16 },
                 { title: "Se mantendra o disminuira", value: 2 },
@@ -221,36 +247,45 @@ export default function MainPage() {
           body={
             <>
               <p className="m-4">
-                Zeetech utiliza tecnologia open-source, lo que nos permite salvaguardar los datos de nuestros clientes en nuestra propia infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y contamos con una amplia variedad de soluciones ya vendidas a gobierno en México
+                Zeetech utiliza tecnologia open-source, lo que nos permite
+                salvaguardar los datos de nuestros clientes en nuestra propia
+                infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y
+                contamos con una amplia variedad de soluciones ya vendidas a
+                gobierno en México
               </p>
               <ProgressCircular
                 values={[
                   { title: "Privacidad de datos", value: 100 },
                   { title: "Uso de tecnología OpenSource", value: 90 },
                   { title: "Desarrollo a la medida", value: 100 },
-                  { title: "De nuestros desarrollos se basan en I.A.", value: 80 },
+                  {
+                    title: "De nuestros desarrollos se basan en I.A.",
+                    value: 80,
+                  },
                 ]}
               />
             </>
           }
         />
-        <Suspense fallback={
-          <div className="min-w-sceen min-h-screen grid justify-items-center content-center">
-            <Spinner />
-          </div>
-        }>
+        <Suspense
+          fallback={
+            <div className="min-w-sceen min-h-screen grid justify-items-center content-center">
+              <Spinner />
+            </div>
+          }
+        >
           <GridPattern
             numSquares={100}
             maxOpacity={0.2}
             duration={2}
             repeatDelay={1}
             className={cn(
-              '[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]',
-              'inset-x-0 inset-y-[-30%] h-[150%] skew-y-12',
+              "[mask-image:radial-gradient(1080px_circle_at_center,white,transparent)]",
+              "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12"
             )}
           />
         </Suspense>
       </div>
     </>
-  )
+  );
 }
