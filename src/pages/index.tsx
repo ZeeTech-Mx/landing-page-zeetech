@@ -59,29 +59,28 @@ export default function MainPage() {
   return (
     <>
       <Container className="max-w-full w-screen h-screen relative dark:bg-black">
-        <div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <TypeAnimation
-              className="text-xl md:text-4xl"
-              style={{
-                fontWeight: "bold",
-                color: "white",
-                whiteSpace: "pre-line",
-                height: "195px",
-                display: "block",
-                textAlign: "center",
-              }}
-              sequence={[
-                "Bienvenidos a Zeetech",
-                300,
-                "Bienvenidos a Zeetech\nInnovando con inteligencia",
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={0}
-            />
-          </div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+          <TypeAnimation
+            className="text-xl md:text-4xl"
+            style={{
+              fontWeight: "bold",
+              color: "white",
+              whiteSpace: "pre-line",
+              height: "195px",
+              display: "block",
+              textAlign: "center",
+            }}
+            sequence={[
+              "Bienvenidos a Zeetech",
+              300,
+              "Bienvenidos a Zeetech\nInnovando con inteligencia",
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={0}
+          />
         </div>
+        <div className="absolute w-full h-full z-10 bg-transparent"/>
         <div
           ref={globeDivEl}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0"
