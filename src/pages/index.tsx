@@ -59,7 +59,7 @@ export default function MainPage() {
   return (
     <>
       <Container className="max-w-full w-screen h-screen relative dark:bg-black">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[31]">
           <TypeAnimation
             className="text-xl md:text-4xl"
             style={{
@@ -80,10 +80,10 @@ export default function MainPage() {
             repeat={0}
           />
         </div>
-        <div className="absolute w-full h-full z-10 bg-transparent"/>
+        <div className="absolute w-full h-full z-[30] bg-transparent"/>
         <div
           ref={globeDivEl}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-[29]"
         >
           <Globe
             ref={globeEl}
@@ -99,7 +99,7 @@ export default function MainPage() {
         </div>
       </Container>
       <SimpleCard
-        className="max-w-full h-screen flex items-center justify-center"
+        className="max-w-full h-[50vh] py-10 flex items-center justify-center"
         body={
           <>
             En ZeeTech, somos una empresa mexicana comprometida con el
@@ -112,7 +112,7 @@ export default function MainPage() {
         title={"No solo desarrollamos tecnología, creamos experiencias"}
       />
       <SimpleCard
-        className="max-w-full h-screen flex items-center justify-center"
+        className="max-w-full h-[50vh] py-10 flex items-center justify-center"
         title="¿Por qué elegirnos?"
         body="De la idea a la ejecución: un enfoque sólido y transparente para transformar tu visión en realidad"
       />
