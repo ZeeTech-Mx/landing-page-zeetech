@@ -42,10 +42,10 @@ export const Card: React.FC<CardProps> = ({
         }}
         className={`flex flex-col relative -top-[25%] h-[450px] w-[80%] rounded-md p-5 md:p-10 origin-top`}
       >
-        <h2 className='text-4xl text-center font-semibold'>{title}</h2>
+        <h2 className='text-2xl md:text-4xl text-center font-semibold'>{title}</h2>
         <div className={`grid grid-cols-2 h-full pt-5 gap-10 py-5`}>
-          <div>
-            <p className='text-md md:text-2xl my-5'>{description}</p>
+          <div className="content-center">
+            <p className='text-2xl max-sm:text-sm max-md:text-lg my-5'>{description}</p>
           </div>
           <div className={`rounded-lg overflow-hidden content-center`}>
             <motion.div style={{ scale: imageScale }}>

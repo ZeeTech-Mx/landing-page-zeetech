@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <div className='flex flex-col mx-auto'>
               <p className='text-xl font-bold mb-5'>Quiero innovar</p>
-              <Link className='hover:text-red-800' to={"/services"}>Servicios</Link>
+              <Link className='hover:text-red-800' to={"/servicios"}>Servicios</Link>
               {/* <Link className='hover:text-red-800' to={"/faq"}>FAQ</Link> */}
             </div>
           </div>
