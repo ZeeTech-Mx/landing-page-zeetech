@@ -10,8 +10,21 @@ import FailureNotificacion from "~/components/notification/failure";
 import { Link } from "react-router-dom";
 import { SocialNetworks } from "~/core/social_networks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faGoogle,
+  faFacebookF,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faEnvelope,
+  faUserFriends,
+  faBlog,
+  faEllipsisH,
+} from '@fortawesome/free-solid-svg-icons';
 import Spinner from "~/components/spinner/loading";
+import InputSelect from "~/components/input/select";
 
 type Contact = {
   fullname: string,
@@ -20,6 +33,7 @@ type Contact = {
   phone: string,
   message: string
   recaptcha: string | null
+  social?: SocialNetworks
 }
 
 const placeholders: Contact = {
@@ -28,12 +42,24 @@ const placeholders: Contact = {
   subject: "Cotización",
   message: "Lorem ipsum dolor sit amet consectetur adipiscing elit cum, ac penatibus semper condimentum erat ornare urna porta elementum, rhoncus senectus ut phasellus tristique dui ullamcorper. Mattis nam mollis dignissim a consequat at nunc nisl, vivamus hac tempor tincidunt potenti cubilia sodales. Accumsan fermentum auctor cum dictum himenaeos eu dis dignissim porttitor netus litora magna, hac cursus et rhoncus faucibus odio penatibus taciti a aptent vel.",
   phone: "",
+  social: undefined,
   recaptcha: ""
 }
 
 const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
+ const socialOptions = [
+    { value: 'FacebookAd', label: 'Facebook', image: faFacebook },
+    { value: 'InstagramAd', label: 'Instagram', image: faInstagram },
+    { value: 'LinkedInPost', label: 'LinkedIn', image: faLinkedin },
+    { value: 'EmailNewsletter', label: 'Email', image: faEnvelope },
+    { value: 'GoogleSearch', label: 'Google', image: faGoogle },
+    { value: 'FriendRecommendation', label: "Un amigo y/o conocido", image: faUserFriends },
+    { value: 'BlogMention', label: 'Blog', image: faBlog },
+    { value: 'Other', label: "Otro", image: faEllipsisH },
+  ];
 
 export default function Contact() {
   const [open, setOpen] = useState(false)
@@ -47,6 +73,7 @@ export default function Contact() {
     subject: Yup.string().required("Ingrese un asunto de correo"),
     phone: Yup.string().required("Ingresa un telefono de contacto").matches(phoneRegExp, "El numero de telefono es invalido"),
     message: Yup.string().required("Ingresa un mensaje de correo"),
+    social: Yup.string().optional(),
     recaptcha: Yup.string().required("Se requiere la captcha")
   });
 
@@ -60,7 +87,7 @@ export default function Contact() {
         message: "",
         recaptcha: ""
       },
-      onSubmit: async (data) => {
+      onSubmit: (data) => {
         axios.post(`${process.env.BACKEND}/send_contact_email`, data).then(() => {
           setOpen(true)
           setTimeout(() => {
@@ -82,6 +109,10 @@ export default function Contact() {
     setFieldValue(name, value);
   };
 
+  function onChangeSelect(val: string, field: string) {
+    setFieldValue(field, val)
+  }
+
   function onChangePhone(value: string) {
     setFieldValue('phone', value)
   }
@@ -91,8 +122,12 @@ export default function Contact() {
   }
 
   return (
-    <section className="min-h-screen bg-cover" style={{ backgroundImage: "url(/chess.webp)" }}>
-      <div className="flex flex-col min-h-screen bg-black/60">
+    <section className="relative min-h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover min-h-screen bg-center bg-zoom"
+        style={{ backgroundImage: "url(/chess.webp)" }}
+      />
+      <div className="relative flex flex-col min-h-screen bg-black/60">
         <div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
           <SuccessNotification
             open={open}
@@ -208,6 +243,20 @@ export default function Contact() {
                       touched={touched}
                       placeholder={placeholders.message}
                       value={values.message}
+                    />
+                  </div>
+
+                  <div className="w-full mt-6">
+                    <InputSelect<Contact>
+                      errors={errors}
+                      label='¿De donde nos conocio?'
+                      name='social'
+                      onBlur={handleBlur}
+                      onChange={onChangeSelect}
+                      touched={touched}
+                      is_required={false}
+                      value={values.social}
+                      options={socialOptions}
                     />
                   </div>
 

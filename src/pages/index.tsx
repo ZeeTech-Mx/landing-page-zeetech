@@ -10,6 +10,7 @@ import ProgressBar from "~/components/progress/bar";
 import { cn } from "~/lib/utils";
 import { ProgressCircular } from "~/components/progress/circular";
 import Spinner from "~/components/spinner/loading";
+import Modal from "~/components/modals/modal";
 
 const GridPattern = lazy(
   () => import("~/components/animata/background/grid-pattern")
@@ -285,6 +286,7 @@ export default function MainPage() {
           />
         </Suspense>
       </div>
+      <Modal/>
     </>
   );
 }
