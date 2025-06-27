@@ -123,7 +123,7 @@ export default function MainPage() {
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">
-                  Expertos en el desarrollo y aplicacion de:
+                  Expertos en el desarrollo y aplicación de:
                 </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">
@@ -146,9 +146,9 @@ export default function MainPage() {
                   Sistemas transaccionales basados en:
                 </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
-                  <li className="text-xl">Metodologias agiles</li>
+                  <li className="text-xl">Metodologías agiles</li>
                   <li className="text-xl">
-                    Politicas de seguridad y encriptación
+                    Políticas de seguridad y encriptación
                   </li>
                   <li className="text-xl">Optimización de procesos</li>
                 </ul>
@@ -170,14 +170,14 @@ export default function MainPage() {
                 </ul>
               </>
             }
-            title="Desarrollo movil"
+            title="Desarrollo móvil"
             className="mx-5 px-10 my-2"
           />
           <InnerShadowCard
             body={
               <>
                 <h2 className="text-3xl font-extrabold dark:text-white">
-                  Colaboramos con socios estrategicos para:
+                  Colaboramos con socios estratégicos para:
                 </h2>
                 <ul className="max-w-md space-y-6 my-6 mx-5 text-gray-500 list-disc list-inside dark:text-gray-400">
                   <li className="text-xl">Centros de datos</li>
@@ -204,7 +204,7 @@ export default function MainPage() {
             className="relative flex flex-col gap-4 items-center justify-center px-4"
           >
             <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-              ¿Que opinan los CEOs sobre la Gen A.I.
+              ¿Qué opinan los CEOs sobre la Gen A.I.
             </div>
             <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
               Según una encuesta de Gartner, las empresas esperan que la Gen Al
@@ -234,7 +234,7 @@ export default function MainPage() {
                 },
                 { title: "Incrementará del 6-10% de productividad", value: 26 },
                 { title: "Incrementará del 1-5% de productividad", value: 16 },
-                { title: "Se mantendra o disminuira", value: 2 },
+                { title: "Se mantendrá o disminuirá", value: 2 },
               ]}
             />
           </motion.div>
@@ -243,11 +243,11 @@ export default function MainPage() {
       <div className="bg-background relative flex min-h-screen min-w-screen items-start justify-center rounded-lg border py-40 md:shadow-xl overflow-hidden">
         <SimpleCard
           className="flex items-center justify-center h-full my-auto"
-          title="¿Por que implementar I.A. con nosotros?"
+          title="¿Por qué implementar I.A. con nosotros?"
           body={
             <>
               <p className="m-4">
-                Zeetech utiliza tecnologia open-source, lo que nos permite
+                Zeetech utiliza tecnología open-source, lo que nos permite
                 salvaguardar los datos de nuestros clientes en nuestra propia
                 infraestructura sin usar 3ros (ChatGPT, Claude, Gemini) y
                 contamos con una amplia variedad de soluciones ya vendidas a

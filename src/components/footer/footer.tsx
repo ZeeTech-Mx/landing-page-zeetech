@@ -3,7 +3,6 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom';
 import { SocialNetworks } from '~/core/social_networks';
 
-
 export default function Footer() {
   return (
     <footer>
@@ -14,7 +13,7 @@ export default function Footer() {
           <div className="mx-8 my-10">
             <ul className="list-disc">
               <li className="my-5 text-md">Inteligencia artificial generativa</li>
-              <li className="my-5 text-md">Analisis de datos y Big Data</li>
+              <li className="my-5 text-md">Análisis de datos y Big Data</li>
               <li className="my-5 text-md">Arquitecturas on promises & cloud</li>
             </ul>
           </div>
@@ -30,10 +29,10 @@ export default function Footer() {
               <Link className='mx-auto' to={""}>
                 <FontAwesomeIcon className='w-8 h-8' icon={faXTwitter} />
               </Link> */}
-              <Link className='mx-auto' to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Facebook'>
+              <Link className='mx-auto' to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra página de Facebook'>
                 <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
               </Link>
-              <Link className='mx-auto' to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Instagram'>
+              <Link className='mx-auto' to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra página de Instagram'>
                 <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
               </Link>
               {/* <Link className='mx-auto' to={""}>

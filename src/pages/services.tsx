@@ -13,7 +13,7 @@ import { FocusCards } from "~/components/cards/image";
 const projects = [
   {
     title: 'Inteligencia artificial',
-    description: 'Desarrollamos soluciones de inteligencia artificial y analisis de datos, orientado 100% a lo que necesitas, tales como: OCR, Text to speech, Speech to text, Summarizers, RAGs, GPTs, entre otros.',
+    description: 'Desarrollamos soluciones de inteligencia artificial y análisis de datos, orientado 100% a lo que necesitas, tales como: OCR, Text to speech, Speech to text, Summarizers, RAGs, GPTs, entre otros.',
     link: '/ai.svg',
     color: '#1A1A7A',
   },
@@ -54,13 +54,12 @@ const Industries = [
   { title: "Medicina", src: "/industry/medicina.webp" },
   { title: "Servicios financieros", src: "/industry/finanzas.webp" },
   { title: "Educación", src: "/industry/education.webp" },
-  { title: "eComerce", src: "/industry/ecommerce.webp" },
+  { title: "eCommerce", src: "/industry/ecommerce.webp" },
   { title: "Ciencia", src: "/industry/ciencia.webp" },
   { title: "Gobierno", src: "/industry/gobierno.webp" },
   { title: "Industria 4.0", src: "/industry/industria.webp" },
   { title: "Marketing", src: "/industry/marketing.webp" }
 ]
-
 
 export default function Services() {
   const container = useRef(null);
@@ -81,14 +80,14 @@ export default function Services() {
           </BoxReveal>
           <BoxReveal boxColor="#991b1b" duration={0.5}>
             <h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold">
-              Aplicaciones de IA para la optimizacion y automatización de procesos internos
+              Aplicaciones de IA para la optimización y automatización de procesos internos
               <span className="text-red-800">.</span>
             </h2>
           </BoxReveal>
           <BoxReveal boxColor="#991b1b" duration={0.5}>
             <div className="mt-6">
               <p className="text-md md:text-xl lg:text-2xl">
-                Desarrollamos soluciones web, moviles y desktop que cubran las necesidades de tu institución aplicando inteligencia artificial 100% desarrollada por nuestro equipo y sin utilizar terceros. Ademas, garantizamos soporte tecnico durante 365 dias despues de la puesta a producción.
+                Desarrollamos soluciones web, móviles y desktop que cubran las necesidades de tu institución aplicando inteligencia artificial 100% desarrollada por nuestro equipo y sin utilizar terceros. Además, garantizamos soporte técnico durante 365 días después de la puesta a producción.
               </p>
             </div>
           </BoxReveal>
@@ -120,7 +119,7 @@ export default function Services() {
           <BoxReveal boxColor="#991b1b" duration={0.5}>
             <div className="mt-6">
               <p className="text-md md:text-xl lg:text-2xl">
-                Sabemos que para ti y tus colaboradores es importante que los sistemas sean eficientes y eficacez. Es por eso que consideramos todos los aspectos para ofrecerte una solución integral con hardware, software y logistica. <br />
+                Sabemos que para ti y tus colaboradores es importante que los sistemas sean eficientes y eficaces. Es por eso que consideramos todos los aspectos para ofrecerte una solución integral con hardware, software y logística. <br />
                 Nuestro equipo es una mezcla de distintos talentos, lo que nos permite entender y resolver los problemas desde diferentes perspectivas.
               </p>
             </div>
@@ -143,7 +142,7 @@ export default function Services() {
           <BoxReveal boxColor="#991b1b" duration={0.5}>
             <div className="mt-6">
               <p className="text-md md:text-xl lg:text-2xl">
-                Incluso la linea de código más insignificante se crea adhiriéndose a estrictos estándares de ingeniería de software. Gracias a ello, desarrollamos sistemas escalables, con bajos indices de error, que responden rápidamente y son compatibles con múltiples plataformas, facilitando eficazmente las actualizaciones futuras.
+                Incluso la línea de código más insignificante se crea adhiriéndose a estrictos estándares de ingeniería de software. Gracias a ello, desarrollamos sistemas escalables, con bajos índices de error, que responden rápidamente y son compatibles con múltiples plataformas, facilitando eficazmente las actualizaciones futuras.
               </p>
             </div>
           </BoxReveal>
