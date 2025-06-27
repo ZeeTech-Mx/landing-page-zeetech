@@ -52,7 +52,7 @@ export default function Example() {
             Blog
           </NavLink> */}
           <NavLink to="/contactanos" aria-label="Sección de contacto de Zeetech" className="text-sm/6 font-semibold text-gray-900 dark:text-white rounded-full hover:bg-red-800 p-2">
-            Contactanos
+            Contáctanos
           </NavLink>
         </PopoverGroup>
       </nav>
@@ -93,7 +93,7 @@ export default function Example() {
                   Blog
                 </NavLink> */}
                 <NavLink to="/contactanos" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-red-900" onClick={() => setMobileMenuOpen(false)}>
-                  Contactanos
+                  Contáctanos
                 </NavLink>
               </div>
             </div>

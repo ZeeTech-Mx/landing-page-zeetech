@@ -14,7 +14,7 @@ export default function App() {
           <Route index element={<MainPage />} />
           <Route path="nosotros" element={<AboutUsPage />} />
           <Route path="servicios" element={<ServicesPage />} />
-          <Route path="contactanos" element={<ContactPage />} />
+          <Route path="contáctanos" element={<ContactPage />} />
         </Route>
       </Routes>
     </ScrollToTop>

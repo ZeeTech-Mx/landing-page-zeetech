@@ -17,7 +17,7 @@ export default function Modal() {
       <ModalContent>
         <div className='flex flex-col space-y-1.5 text-center sm:text-left'>
           <h2 className='text-3xl font-semibold text-center '>
-            Envianos tu requerimiento
+            Envíanos tu requerimiento
           </h2>
           <p className='text-xl text-muted-foreground text-center'>
             Con gusto te atendemos

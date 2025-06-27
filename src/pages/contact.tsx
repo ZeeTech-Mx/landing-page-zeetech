@@ -40,7 +40,7 @@ const placeholders: Contact = {
   fullname: "Doyle Becker",
   email: "Cesar.lynch@hotmail.com",
   subject: "Cotización",
-  message: "Lorem ipsum dolor sit amet consectetur adipiscing elit cum, ac penatibus semper condimentum erat ornare urna porta elementum, rhoncus senectus ut phasellus tristique dui ullamcorper. Mattis nam mollis dignissim a consequat at nunc nisl, vivamus hac tempor tincidunt potenti cubilia sodales. Accumsan fermentum auctor cum dictum himenaeos eu dis dignissim porttitor netus litora magna, hac cursus et rhoncus faucibus odio penatibus taciti a aptent vel.",
+  message: "Escriba su mensaje.",
   phone: "",
   social: undefined,
   recaptcha: ""
@@ -70,8 +70,8 @@ export default function Contact() {
   const FormSchema = Yup.object<Contact>().shape({
     fullname: Yup.string().required("Ingresa tu nombre completo"),
     email: Yup.string().email("Se debe ingresar un correo valido").required("Ingresa tu correo electronico"),
-    subject: Yup.string().required("Ingrese un asunto de correo"),
-    phone: Yup.string().required("Ingresa un telefono de contacto").matches(phoneRegExp, "El numero de telefono es invalido"),
+    subject: Yup.string().required("Ingresa un asunto de correo"),
+    phone: Yup.string().required("Ingresa un teléfono de contacto").matches(phoneRegExp, "El número de teléfono es invalido"),
     message: Yup.string().required("Ingresa un mensaje de correo"),
     social: Yup.string().optional(),
     recaptcha: Yup.string().required("Se requiere la captcha")
@@ -154,11 +154,11 @@ export default function Contact() {
 
                 <div className="flex mt-4 -mx-1.5 ">
 
-                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Facebook'>
+                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.facebook} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra página de Facebook'>
                     <FontAwesomeIcon className='w-8 h-8' icon={faFacebookF} />
                   </Link>
 
-                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra pagina de Instagram'>
+                  <Link className="mx-1.5 text-white transition-colors duration-300 transform hover:text-red-500" to={SocialNetworks.instagram} target="_blank" rel="noopener noreferrer" aria-label='Visita nuestra página de Instagram'>
                     <FontAwesomeIcon className='w-8 h-8' icon={faInstagram} />
                   </Link>
                 </div>
@@ -169,7 +169,7 @@ export default function Contact() {
               <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
 
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
-                  Haz grande tu negocio o empresa con un click.
+                  Haz grande tu negocio o empresa con un clic.
                 </p>
 
                 <form className="mt-6" onSubmit={handleSubmit}>
@@ -249,7 +249,7 @@ export default function Contact() {
                   <div className="w-full mt-6">
                     <InputSelect<Contact>
                       errors={errors}
-                      label='¿De donde nos conocio?'
+                      label='¿De dónde nos conoció?'
                       name='social'
                       onBlur={handleBlur}
                       onChange={onChangeSelect}

@@ -2,7 +2,6 @@ import { ReactLenis } from 'lenis/react'
 import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
-
 export default function AboutUs() {
   const [isFinished, setIsFinished] = useState<boolean>(false)
   return (
@@ -65,7 +64,7 @@ export default function AboutUs() {
               <h4 className='text-4xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
                 Misión
               </h4>
-              <p className='text-2xl md:text-4xl text-center mt-10'>Innovar soluciones en tecnología tanto de software, hardware, centros de datos y telecomunicaciones; Obteniendo el mejor costo beneficio para nuestros clientes.</p>
+              <p className='text-2xl md:text-4xl text-center mt-10'>Innovar soluciones en tecnología tanto de software, hardware, centros de datos y telecomunicaciones; obteniendo el mejor costo beneficio para nuestros clientes.</p>
             </section>
 
             <section className='text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0'>
@@ -73,7 +72,7 @@ export default function AboutUs() {
               <h1 className='2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
                 Visión
               </h1>
-              <p className='text-2xl md:text-4xl text-center mt-10'>Ser líderes en México en la entrega de soluciones de software innovadoras y confiables, impulsando el éxito de clientes locales e internacionales.</p>
+              <p className='text-2xl md:text-4xl text-center mt-10'>Ser líderes en México en la entrega de soluciones de software innovadoras y confiables, impulsando el éxito de clientes locales e internacionales. </p>
             </section>
           </article>
         </main>
