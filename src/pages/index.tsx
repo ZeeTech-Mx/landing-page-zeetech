@@ -11,12 +11,14 @@ import { cn } from "~/lib/utils";
 import { ProgressCircular } from "~/components/progress/circular";
 import Spinner from "~/components/spinner/loading";
 import Modal from "~/components/modals/modal";
+import { useNavigate } from "react-router-dom";
 
 const GridPattern = lazy(
   () => import("~/components/animata/background/grid-pattern")
 );
 
 export default function MainPage() {
+  const navigate = useNavigate();
   const globeEl = useRef<GlobeMethods>();
   const globeDivEl = useRef<any>(null);
   const [height, setHeight] = useState(0);
@@ -112,6 +114,7 @@ export default function MainPage() {
         }
         title={"No solo desarrollamos tecnología, creamos experiencias"}
       />
+      <img id="webinar" className="cursor-pointer" title="Registrate a nuestro webinar" src="register.svg" onClick={() => navigate("/webinar")}/>
       <SimpleCard
         className="max-w-full h-[50vh] py-10 flex items-center justify-center"
         title="¿Por qué elegirnos?"

@@ -4,6 +4,7 @@ import ScrollToTop from "./components/scroll/scrollToTop";
 import NotFound from "./pages/404";
 import { lazy, Suspense } from "react";
 import Spinner from "./components/spinner/loading";
+import Webinar from "./pages/webinar";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="nosotros" element={<AboutUsPage />} />
           <Route path="servicios" element={<ServicesPage />} />
           <Route path="contactanos" element={<ContactPage />} />
+          <Route path="webinar" element={<Webinar />} />
         </Route>
       </Routes>
     </ScrollToTop>

@@ -30,6 +30,7 @@
     "react-dom": "^18.3.1",
     "react-globe.gl": "^2.28.3",
     "react-google-recaptcha": "^3.1.0",
+    "react-idle-timer": "^5.7.2",
     "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.0.2",
     "react-type-animation": "^3.2.0",

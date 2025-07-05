@@ -2,15 +2,32 @@
 import { useEffect, useState } from 'react';
 import { FramerModal, ModalContent } from './dialog';
 import { NavLink } from 'react-router-dom';
+import { useIdleTimer } from 'react-idle-timer';
+
 
 export default function Modal() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [timeVal, setTimeVal] = useState<number>();
+
+  const { getRemainingTime } = useIdleTimer({
+    timeout: 1000 * 10,
+    throttle: 500,
+    crossTab: true
+  })
+
 
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
+      setTimeVal(getRemainingTime());
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (timeVal!==undefined && timeVal <= 0) {
       setModalOpen(true)
-    }, 6000)
-  }, [])
+    }
+  }, [timeVal])
+
 
   return (
     <FramerModal open={modalOpen} setOpen={setModalOpen}>
